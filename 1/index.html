@@ -16,11 +16,18 @@
     list.next.next.next = {value: 4};
 	
 	function printReverseList(list){
-		
-		if (list.next) printReverseList(list.next);
-		
-		
-		document.write(list.value, "<br/>");
+		var array = [];
+		var i = 0;
+		array [0] = list.value;
+		while (list.next){
+			
+			array[++i] = list.next.value;
+			list.next = list.next.next;
+		}
+		array.reverse();
+		for ( i = 0; i < array.length; ++i){
+			document.write(array[i], "<br/>");
+		}
 	}
 	printReverseList(list);
   </script>
