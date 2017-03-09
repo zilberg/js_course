@@ -15,11 +15,14 @@
     list.next.next = {value: 3};
     list.next.next.next = {value: 4};
 	
-	function printList(list){
+	function printReverseList(list){
+		
+		if (list.next) printReverseList(list.next);
+		
+		
 		document.write(list.value, "<br/>");
-		if (list.next) printList(list.next);
 	}
-	printList(list);
+	printReverseList(list);
   </script>
 
 </body>
