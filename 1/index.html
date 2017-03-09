@@ -16,12 +16,8 @@
     list.next.next.next = {value: 4};
 	
 	function printList(list){
-		document.write(list.value, "<br>");
-		
-		while(list.next){
-			document.write(list.next.value, "<br>");
-			list.next = list.next.next;
-		}
+		document.write(list.value, "<br/>");
+		if (list.next) printList(list.next);
 	}
 	printList(list);
   </script>
