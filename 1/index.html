@@ -15,14 +15,15 @@
     list.next.next = {value: 3};
     list.next.next.next = {value: 4};
 	
-	document.write(list.value);
-	document.write("<br>");
-	document.write(list.next.value);
-	document.write("<br>");
-	document.write(list.next.next.value);
-	document.write("<br>");
-	document.write(list.next.next.next.value);
-	document.write("<br>");
+	function printList(list){
+		document.write(list.value, "<br>");
+		
+		while(list.next){
+			document.write(list.next.value, "<br>");
+			list.next = list.next.next;
+		}
+	}
+	printList(list);
   </script>
 
 </body>
