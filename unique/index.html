@@ -8,16 +8,32 @@
 <body>
 
   <script>
-	function unique(arr){
-		var obj ={};
-		
-		for (var i = 0; i < arr.length; ++i){
-			obj[arr[i]] ='';
+  
+  function unique(arr){
+	var result = [];
+	
+	nextInput:
+	for (var i = 0; i < arr.length; i++){
+		var str = arr[i];
+			
+			for( var j = 0; j < result.length; ++j){
+				if (result[j] == str) continue nextInput;
+			}
+			result.push(str);
 		}
-		var result = [];
-		for( var i in obj) result.push(i);
 		
 		return result;
+	}
+  
+	function unique0(arr){
+		var obj = {};
+		
+		for (var i = 0; i < arr.length; i++){
+			var str = arr[i];
+			obj[str] = true;
+		}
+		
+		return Object.keys(obj);
 	}
 	var strings = ["кришна", "кришна", "харе", "харе",
   "харе", "харе", "кришна", "кришна", "8-()"
