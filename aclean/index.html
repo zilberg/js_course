@@ -8,8 +8,42 @@
 <body>
 
   <script>
-
-  
+	var arr = ["воз", "киборг", "корсет", "зов", "гробик", "костер", "сектор"];
+	//var arr = ["корсет","костер", "сектор"];
+	function aclean(arr){
+	for (var i = 0; i <arr.length; ++i){
+		var temp1 = arr[i].toLowerCase();
+		
+		for (var j = i+1; j <arr.length; ++j){
+			//если длины слов не равны, то отбрасываем
+			if (arr[i].length != arr[j].length) continue;
+			//отсортируем все буквы на словах и сравним
+			var temp2 = arr[j].toLowerCase();
+			//.if (temp1.sort() == temp2.sort) arr.splice(j,1);
+			var arr_temp1 = [];
+			var arr_temp2 = [];
+			for( var k = 0; k < temp1.length; ++k){
+				arr_temp1.push(temp1[k]);
+				arr_temp2.push(temp2[k]);
+			}
+			arr_temp1.sort();
+			arr_temp2.sort();
+			
+			str_temp1 = arr_temp1.join();
+			str_temp2 = arr_temp2.join();
+			
+			if (str_temp1 == str_temp2) 
+			{
+			arr.splice(j,1);
+			//нужно уменьшить шаг 1 после удаления элемента массива
+			j = j-1;
+			}
+			
+		}
+	}
+	return arr;
+	}
+	document.write(aclean(arr));
   </script>
 
 </body>
