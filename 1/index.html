@@ -15,16 +15,19 @@
     list.next.next = {value: 3};
     list.next.next.next = {value: 4};
 	
-	function printList(list){
+	function printReverseList(list){
+		var arr = [];
 		var tmp = list;
-		
 		while (tmp){
-			document.write(tmp.value, "<br/>");
+			arr.push(tmp.value);
 			tmp = tmp.next;
-			
+		}
+		
+		for (var i = arr.length - 1; i >= 0; --i){
+			document.write(arr[i], "<br/>");
 		}
 	}
-	printList(list);
+	printReverseList(list);
   </script>
 
 </body>
