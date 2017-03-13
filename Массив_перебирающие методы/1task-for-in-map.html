@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+	
+	var arr = ["есть","жизнь","на","Марсе"];
+	/*
+	var arrLength = [];
+	for (var i = 0; i < arr.length; i++){
+		arrLength[i] = arr[i].length;
+	}
+	*/
+	
+	var arrLength = arr.map(function (elem){
+	return elem.length;} );
+	document.write(arrLength);
+  </script>
+</body>
+
+</html>
