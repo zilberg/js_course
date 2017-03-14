@@ -21,9 +21,14 @@
 		for(var i = 0; i < 1000; i++) f(arr);
 		return new Date() - date;
 	};
-	
-	document.write('Время walkIn ', bench(walkIn), "</br>");
-	document.write('Время walkLength: ',  bench(walkLength));
+	//bench для каждого теста запустим много раз, чередуя
+	var timeIn = 0, timeLength = 0;
+	for (var i = 0; i < 100; i++){
+		timeIn += bench(walkIn);
+		timeLength += bench(walkLength);
+	}
+	document.write('Время walkIn ', timeIn, "</br>");
+	document.write('Время walkLength: ',  timeLength);
 	</script>
 </body>
 </html>
