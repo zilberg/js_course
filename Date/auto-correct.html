@@ -1,0 +1,34 @@
+<html>
+<head>
+</head>
+<body>
+	<script>
+	var date = new Date(2013, 01, 32);
+	document.write(date, "</br>");
+	
+	var d = new Date(2017, 1, 27);
+	d.setDate(d.getDate() + 2);
+	document.write(d, "</br>")
+	
+	var d2 = new Date();
+	d2.setSeconds(d.getSeconds() +70);
+	
+	document.write(d2, "<br>");
+	//Можно установить и нулевые, и даже отрицательные компоненты. Например:
+	var d3 = new Date;
+	
+	d3.setDate(1);
+	document.write(d3,"<br>");
+	
+	d3.setDate(0);
+	document.write(d3,"<br>");
+	
+	var d4 = new Date;
+	
+	d4.setDate(-1);
+	document.write(d4,"<br>");
+	
+	
+	</script>
+</body>
+</html>
