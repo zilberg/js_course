@@ -1,0 +1,29 @@
+<html>
+<head>
+</head>
+<body>
+	<script>
+	function walkIn(arr){
+		for (var key in arr) arr[key]++
+	}
+	
+	function walkLength(arr){
+		for (var i =0; i < arr.length; ++i){
+			arr[i]++
+		}
+	}
+	
+	var arr = [];
+	for (var i = 0; i < 1000; i++) arr[i] = 0;
+	
+	function bench(f){
+		var date = new Date();
+		for(var i = 0; i < 1000; i++) f(arr);
+		return new Date() - date;
+	};
+	
+	document.write('Время walkIn ', bench(walkIn), "</br>");
+	document.write('Время walkLength: ',  bench(walkLength));
+	</script>
+</body>
+</html>
