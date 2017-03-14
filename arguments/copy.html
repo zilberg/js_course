@@ -1,0 +1,53 @@
+<html>
+<head>
+	<meta charset = "utf-8">
+</head>
+<body>
+	<script>
+	/*
+	function copy(){
+		var dst = arguments[0];
+		for(var i = 1; i < arguments.length; ++i){
+			var arg = arguments[i];
+			for ( var key in arg){
+				dst[key] = arg[key];
+			}
+		}
+		
+		return dst;
+	};
+	*/
+	function copy(dst){
+		for (var i = 1; i <arguments.length; i++){
+			var arg = arguments[i];
+			for (var key in arg){
+				dst[key] = arg[key];
+			}
+		}
+		return dst;
+	};
+	var vasya = {
+		age:21,
+		name: 'Вася',
+		surname: 'Петров',
+	};
+	
+	var user = {
+		isAdmin: false,
+		isEmailConfirmed: true,
+	};
+	
+	var student ={
+		university: 'My university',
+	};
+	
+	copy(vasya, user, student);
+	
+	document.write(vasya.isAdmin, "<br>");
+	document.write(vasya.university, "<br>");
+	//скопируем все свойства в пустой объект
+	var userClone = copy({}, user);
+	 document.write(userClone.university);
+	</script>
+</body>
+</html>
