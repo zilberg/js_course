@@ -1,0 +1,20 @@
+<html>
+<head>
+</head>
+<body>
+	<script>
+	var date = new Date();
+	
+	document.write("<h2>",date.getHours(),"</h3>", "</br>");
+	
+	document.write("<h2>",date.getUTCHours(),"</h3>", "</br>");
+	//document.write("<h2>", new Date(2017,02,14).getUTCDate(),"</h3>", "</br>");
+	//document.write("<h2>", new Date().getTimezoneOffset(),"</h3>", "</br>");
+	var t = date.getHours() - date.getUTCHours()
+	if(t != 3){
+		date.setHours(date.getHours() - t + 3);
+		document.write(date);
+	}
+	</script>
+</body>
+</html>
