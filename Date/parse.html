@@ -1,0 +1,16 @@
+<html>
+<head>
+</head>
+<body>
+	<script>
+	var msUTC = Date.parse('2012-01-26T13:51:50.417Z');
+	document.write(new Date(msUTC), "<br/>");
+	
+	//С таймзоной -07:00 GMT:
+	
+	var ms = Date.parse('2012-01-26T13:51:50.417-07:00');
+	document.write(new Date(ms), "<br/>");
+	document.write(new Date(Date.now()), "<br/>");
+	</script>
+</body>
+</html>
