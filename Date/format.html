@@ -1,0 +1,30 @@
+<html>
+<head>
+</head>
+<body>
+	<script>
+	var date = new Date(2014, 11, 31, 12, 30, 0);
+	var options = {
+		era: 'long',
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric',
+		weekday: 'long',
+		timezone: 'UTC',
+		hour: 'numeric',
+		minute: 'numeric',
+		second: 'numeric',
+	};
+	document.write(date.toLocaleString("ru", options), "<br>");
+	document.write(date.toLocaleString("en-US", options), "<br>");
+	
+	var d = new Date();
+	document.write(d.toString(), "<br>");
+	document.write(d.toUTCString(), "<br>");
+	
+	d = new Date();
+	document.write(d.toISOString(), "<br>");
+	
+	</script>
+</body>
+</html>
