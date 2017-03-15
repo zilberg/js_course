@@ -5,7 +5,13 @@
 	<script>
 	function getWeekDay(date){
 		
-		return date.getDay() == 0 ? 7 :  date.getDay();
+		var day = date.getDay();
+
+		if (day == 0){
+			day = 7;
+		}
+
+		return day;
 	}
 
 	var date = new Date(2017,02,13)
