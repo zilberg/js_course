@@ -4,35 +4,11 @@
 <body>
 	<script>
 	function getWeekDay(date){
-		var i = date.getDay();
-		var strDay ='';
-		switch(i){
-			case 0:
-				strDay = 'вс';
-				break;
-			case 1:
-				strDay = 'пн';
-				break;
-			case 2:
-				strDay = 'вт';
-				break;
-			case 3:
-				strDay = 'ср';
-				break;
-			case 4:
-				strDay = 'чт';
-				break;
-			case 5:
-				strDay = 'пт';
-				break;
-			case 6:
-				strDay = 'сб';
-				break;
-		}
-		return strDay;
+		var days = ['вс','пн','вт','ср','чт','пт', 'сб'];
+		return days[date.getDay()];
 	}
 
-	var date = new Date(2017,02,14)
+	var date = new Date(2017,02,16)
 	document.write(getWeekDay(date));
 	</script>
 </body>
