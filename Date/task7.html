@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="https://js.cx/test/libs.js"></script>
+<script src ="test6.js"></script>
+</head>
+<body>
+	<script>
+	function getSecondsToTomorrow(){
+		var t = new Date();
+
+		return Math.floor((t.setDate(t.getDate()+1) - new Date())/1000);
+	};
+	function getSecondsToTomorrow2(){
+		var now = new Date();
+
+		//создать объект из завтрашней даты, без часов-минут-секунд
+		var tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() +1);
+		var diff = tomorrow - now
+		return Math.round(diff/1000);
+	}
+	
+	document.write(getSecondsToTomorrow(), "<br/>");
+	document.write(getSecondsToTomorrow2(), "<br/>");
+	</script>
+</body>
+</html>
