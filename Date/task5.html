@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="https://js.cx/test/libs.js"></script>
+<script src ="test5.js"></script>
+</head>
+<body>
+	<script>
+	function getLastDayOfMonth(year, month){
+		var date = new Date(year, month);
+		var testV = date.setDate(date.getDate() + 30);
+		var day = date.getDate();
+		if (day == 31) return 31;
+		if (day == 1) return 30;
+		if (day == 3) return 28;
+		return 29
+
+
+	};
+
+	
+	document.write(getLastDayOfMonth(2017, 1), "<br/>");
+	document.write(getLastDayOfMonth(2017, 2), "<br/>");
+	document.write(getLastDayOfMonth(2017, 3), "<br/>");
+	</script>
+</body>
+</html>
