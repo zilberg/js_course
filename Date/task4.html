@@ -1,0 +1,21 @@
+<html>
+<head>
+</head>
+<body>
+	<script>
+	function getDateAgo(date, days){
+		var dateCopy = new Date(date);
+
+		dateCopy.setDate(date.getDate() - days);
+
+		return dateCopy.getDate();
+	};
+
+	var date = new Date(2015, 0, 2);
+
+	document.write(getDateAgo(date, 1), "<br/>");
+	document.write(getDateAgo(date, 2), "<br/>");
+	document.write(getDateAgo(date, 365), "<br/>");
+	</script>
+</body>
+</html>
