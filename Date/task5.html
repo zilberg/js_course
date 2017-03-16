@@ -7,15 +7,8 @@
 <body>
 	<script>
 	function getLastDayOfMonth(year, month){
-		var date = new Date(year, month);
-		var testV = date.setDate(date.getDate() + 30);
-		var day = date.getDate();
-		if (day == 31) return 31;
-		if (day == 1) return 30;
-		if (day == 3) return 28;
-		return 29
-
-
+		var date = new Date(year, month + 1, 0)
+		return date.getDate();
 	};
 
 	
