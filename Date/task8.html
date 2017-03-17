@@ -6,14 +6,17 @@
 </head>
 <body>
 	<script>
-	function formatDate(date){
-		var day = date.getDate();
+		function formatDate(date){
+	var day = date.getDate();
 		if (day < 10) day = '0' + day;
 
-		var month = date.getMonth();
+		var month = date.getMonth() + 1;
 		if (month < 10) month = '0' + month;
 
-		return day + '.' + month + '.' + date.getFullYear();
+		var year = date.getFullYear() % 100;
+		if (year < 10) year = '0' + year;
+
+		return day + '.' + month + '.' + year;
 	}
 
 	var d = new Date(2017, 1, 1);
