@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="https://js.cx/test/libs.js"></script>
+<script src ="test9.js"></script>
+</head>
+<body>
+	<script>
+		function formatDate(date){
+			var now = new Date();
+			var diff = now - date;
+			if ( diff < 1000) return "только что";
+			if ( diff < 60000) return diff / 1000 + " сек. назад";
+			if (diff < 3600000) return diff / 60000 + " мин. назад";
+		var day = date.getDate();
+		if (day < 10) day = '0' + day;
+
+		var month = date.getMonth() + 1;
+		if (month < 10) month = '0' + month;
+
+		var year = date.getFullYear() % 100;
+		if (year < 10) year = '0' + year;
+
+		var minutes = date.getHours()
+		if (minutes < 10) minutes = '0' + minutes;
+		
+		var seconds = date.getMinutes()
+		if (seconds < 10) seconds = '0' + seconds;
+
+		return day + '.' + month + '.' + year + " " + minutes + ":" + seconds ;
+	}
+
+	var d = new Date(2017, 1, 1);
+	
+	document.write(formatDate(d))
+	
+	</script>
+</body>
+</html>
