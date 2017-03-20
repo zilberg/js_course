@@ -1,0 +1,27 @@
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		var a = 5;
+		alert(window.a);
+
+		window.b = 6;
+		document.write(b);
+
+		document.write("<br/>");
+		//Кстати, тот факт, что к началу выполнения кода переменные и функции уже 
+		//содержатся в window, можно легко проверить, выведя их:
+
+		document.write("d" in window, "<br/>"); //true, т.к. есть свойство window.a
+		document.write(d, "<br/>"); //равно undefined, присвоение будет выполнено далее
+		document.write(f, "<br/>"); // function ..., готовая к выполнению функция
+		document.write(g, "<br/>"); //undefined, т.к.  это переменная, а не Function Declaration
+
+		var d = 5;
+		function f() {/* */}
+ 		var g = function(){/* */};
+	</script>
+</body>
+</html>
