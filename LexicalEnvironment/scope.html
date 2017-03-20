@@ -1,0 +1,24 @@
+<html>
+<head>
+</head>
+<body>
+	<script type="text/javascript">
+		function makeCounter(){
+			var currentCount = 1;
+
+			return function(){
+				return currentCount++;
+			};
+		}
+
+		var counter = makeCounter();
+
+		document.write(counter(), "<br />");
+		document.write(counter(), "<br />");
+		document.write(counter(), "<br />");
+		document.write(" Новый счетчик <br />");	
+		var counter2 = makeCounter();
+		document.write(counter2(), "<br />");
+	</script>
+</body>
+</html>
